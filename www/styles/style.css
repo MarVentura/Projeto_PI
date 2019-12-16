@@ -80,11 +80,12 @@ h3{
 
 }
 
-.article{
-  align: center;
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  text-align: left;
+  padding-left:20px;
 }
-
-.section{
-  align: center;
-}
-
