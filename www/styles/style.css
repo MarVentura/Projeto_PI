@@ -15,7 +15,7 @@ ul.topnav {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #333;
+  background-color: black;
   position: fixed;
   top: 0;
   text: 12px;
@@ -36,7 +36,6 @@ ul.topnav > li{
   margin-left:200px;
 }
 
-
 ul.topnav li a:hover:not(.active) {background-color: #111;}
 
 /*
@@ -56,8 +55,7 @@ body {
   margin: 0; 
   height: 100%; 
   overflow: hidden;
-  background-color: skyblue;
-  background-image: url('back.jpeg');   /*Erro aqui*/
+  background-image:  url("/images/back.jpg");
   background-repeat: no-repeat;
   background-position: center; 
   background-attachment: fixed;
@@ -268,3 +266,9 @@ h3{
 }
 
 /*flip images*/
+
+.spacing{
+
+  margin-top:60px;
+
+}
