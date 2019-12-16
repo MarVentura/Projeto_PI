@@ -8,16 +8,40 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="scripts/navbar.js"> </script>  <!-- Carregar a navbar  -->
+    <script src="scripts/slideshow.js"></script> <!-- Slideshow   -->
     <title>Home Page</title>    
 </head>
 
 
 <body> 
-    <div id="navbarLoad"></div>  
-    
+    <div id="navbarLoad"></div>      
 
-  
+    <div class="slideshow-container">
 
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+
+        <div class="mySlides fade">
+          <img src="images/aphelios.png" style="width:70%" class="center">
+        </div>
+        
+        <div class="mySlides fade">
+          <img src="images/drake.png" style= "width:70%" class="center">
+        </div>        
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        
+        </div>
+        <br>
+        
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span> 
+          <span class="dot" onclick="currentSlide(2)"></span> 
+        </div>
 
     <dic class = "footer">
       <p>Copyright 2019 Herie and Marcou</p>
