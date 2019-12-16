@@ -56,7 +56,7 @@ body {
   margin: 0; 
   height: 100%; 
   overflow: hidden;
-  background-color: skyblue;
+  background-color: #5383e8;
   background-image: url('back.jpeg');   /*Erro aqui*/
   background-repeat: no-repeat;
   background-position: center; 
