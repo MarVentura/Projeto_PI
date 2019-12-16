@@ -208,3 +208,63 @@ h3{
   margin-right: auto;
   width: 50%;
 }
+/* 
+  Best player display
+*/
+
+.outterDiv{
+
+  width:100%;
+  background-image: url("/images/background.jpg");
+  background-size: 400px;
+  padding-top: 10px;
+  padding-bottom: 0px;
+
+}
+.flex-container {
+  display: flex;
+  flex-wrap: nowrap;
+  margin-left: 3%;
+  margin-right: 3%;
+}
+
+.flex-container > div {
+  width: 20%;
+  margin: 30px;
+  text-align: center;
+}
+
+.flex-container > div > img{
+
+  max-width: 150px;
+  max-height: 150px;
+  border-radius: 50%;
+  border-style:solid;
+  border-color: #0099ff;
+  border-width: 7px;
+  -webkit-animation: mymove 5s infinite; /* Safari 4.0 - 8.0 */
+  animation: mymove 5s infinite;
+
+}
+
+.role{
+  font-size: 24px;
+  height: 30px;
+  margin-block-start: 5px;
+  margin-block-end: 5px;
+  color: white;
+}
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes mymove {
+  50% {border-color: lightblue;}
+}
+
+@keyframes mymove {
+  50% {border-color: lightblue;}
+}
+
+.checked {
+  color: orange;
+}
+
+/*flip images*/
