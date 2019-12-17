@@ -79,9 +79,8 @@ h3{
 }
 
 .circular--square {
-
-  width: 230px;
-  height: 250px;
+  width: 150px;
+  height: 150px;
   padding:1px;
   border:1px solid #021a40;
 }
@@ -212,7 +211,7 @@ h3{
 */
 
 .divCentro{
-  margin-left: 500px;
+  margin-left: 800px;
   margin-right: 500px;
 }
 
