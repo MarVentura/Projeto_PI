@@ -1,11 +1,7 @@
 /* myStyle.css */
 
 @charset "UTF-8";
-/*                                              */
-th, td, tr{
-    width: 125px;
-    border: 1px solid black;
-}
+/*               */
 
 ul.topnav {
   width: 100%;
@@ -15,7 +11,7 @@ ul.topnav {
   padding: 0;
   overflow: hidden;
   background-color: black;
-  position: fixed;
+  position: absolute;
   top: 0;
   text: 12px;
 }
@@ -53,13 +49,12 @@ body {
   font-family:'Verdana';
   margin: 0; 
   height: 100%; 
-  overflow: hidden;
-  background-color: #5383e8;
-  background-image: url('back.jpeg');   /*Erro aqui*/
-  background-image:  url("/images/back.jpg");
-  background-repeat: no-repeat;
-  background-position: center; 
-  background-attachment: fixed;
+  overflow: auto;
+  background-image:  url("/images/back.jpg"); 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 img {
@@ -92,13 +87,14 @@ h3{
 }
 
 .footer {
-  position: fixed;
+  position: static;
   left: 0;
   bottom: 0;
   width: 100%;
   color: white;
   text-align: left;
   padding-left:20px;
+  padding-top: 100px;
 }
 
 /* Slideshow */
@@ -166,7 +162,7 @@ h3{
   cursor: pointer;
   height: 15px;
   width: 15px;
-  margin: 0 2px;
+  margin: 0 2px;  
   background-color: white;
   border-radius: 50%;
   display: inline-block;
@@ -315,7 +311,33 @@ h3{
 
 /* Style the back side */
 .flip-card-back {
-  background-color: dodgerblue;
+  background-color: gray;
   color: white;
   transform: rotateY(180deg);
 } 
+
+.imagensEquipas{
+  width: 210px;
+  height: 100%;
+}
+
+.tabelaEquipasEspaço {
+  position: relative;
+  left: 10%;
+}
+
+
+.tabelaEquipasEspaço td{
+  width: 320px;
+  padding-top: 50px;
+}
+
+.divTitulo{
+  margin-top: 150px;
+  margin-left: 800px;
+  margin-right: 500px;
+}
+
+.h1Titulo{
+  font-size: 50px;
+}

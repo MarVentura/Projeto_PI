@@ -9,16 +9,16 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="scripts/navbar.js"> </script>  <!-- Carregar a navbar  -->
-    <script src="scripts/slideshow.js"></script> <!-- Slideshow   -->
+    
     <title>Home Page</title>    
 </head>
 
-<body> 
+<body onload=""> 
 
-    <div id="navbarLoad"></div>      
+<div id="navbarLoad"></div>      
 
     <div class="spacing">
-<div class="slideshow-container">
+      <div class="slideshow-container">
 
     <br>
     <br>
@@ -27,23 +27,23 @@
     <br>
     <br>
       
-      <div class="mySlides fade">
-        <img src="images/skaarl.gif" style="width:70%" class="center">
+      <div>
+        <img class="mySlides fade" src="images/skaarl.gif" style="width:70%" class="center">
       </div>
       
-      <div class="mySlides fade">
-        <img src="images/drake.png" style= "width:70%" class="center">
+      <div>
+        <img class="mySlides fade" src="images/drake.png" style= "width:70%" class="center">
       </div>        
 
-      <div class="mySlides fade">
-          <img src="images/aphelios.png" style= "width:70%" class="center">
+      <div>
+          <img class="mySlides fade" src="images/aphelios.png" style= "width:70%" class="center">
         </div>     
 
       <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
       <a class="next" onclick="plusSlides(1)">&#10095;</a>
       
-</div>
-</div>
+      </div>
+    </div>
       
       <div style="text-align:center">
         <span class="dot" onclick="currentSlide(1)"></span> 
@@ -54,134 +54,14 @@
       <div class="spacing"></div>
 
      
-     <div class="outterDiv">
-     <div class="flex-container">
-
-      <div class="flip-card">
-            <div class="flip-card-inner">
-              <div class="flip-card-front">
-
-                    <img src="/images/img_avatar2.png" style="width:300px;height:100%">
-              </div>
-              <div class="flip-card-back">        
-                    <p class="role">TOP</p>
-                    <br>
-                    <br>
-                    <img src="/images/img_avatar2.png" class="circular--square ">
-                    <br>
-                    <br>
-                    <br>
-                    <p class="role">Player1 - 1100LP</p>
-                    <p class="role"><span class="fa fa-star checked"></span>             
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span></p>     
-                    </div>    
-              </div>
-            </div>
-
-            <div class="flip-card">
-                    <div class="flip-card-inner">
-                      <div class="flip-card-front">
-        
-                            <img src="/images/img_avatar2.png" style="width:300px;height:100%">
-                      </div>
-                      <div class="flip-card-back">        
-                            <p class="role">MID</p>
-                            <br>
-                            <br>
-                            <img src="/images/img_avatar2.png" class="circular--square ">
-                            <br>
-                            <br>
-                            <br>
-                            <p class="role">Player1 - 1100LP</p>
-                            <p class="role"><span class="fa fa-star checked"></span>             
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span></p>     
-                            </div>    
-                      </div>
-                    </div>
-
-                    <div class="flip-card">
-                            <div class="flip-card-inner">
-                              <div class="flip-card-front">
-                
-                                    <img src="/images/img_avatar2.png" style="width:300px;height:100%">
-                              </div>
-                              <div class="flip-card-back">        
-                                    <p class="role">JUNGLE</p>
-                                    <br>
-                                    <br>
-                                    <img src="/images/img_avatar2.png" class="circular--square ">
-                                    <br>
-                                    <br>
-                                    <br>
-                                    <p class="role">Player1 - 1100LP</p>
-                                    <p class="role"><span class="fa fa-star checked"></span>             
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span></p>     
-                                    </div>    
-                              </div>
-                            </div>
-
-                            <div class="flip-card">
-                                    <div class="flip-card-inner">
-                                      <div class="flip-card-front">
-                        
-                                            <img src="/images/img_avatar2.png" style="width:300px;height:100%">
-                                      </div>
-                                      <div class="flip-card-back">        
-                                            <p class="role">BOT</p>
-                                            <br>
-                                            <br>
-                                            <img src="/images/img_avatar2.png" class="circular--square ">
-                                            <br>
-                                            <br>
-                                            <br>
-                                            <p class="role">Player1 - 1100LP</p>
-                                            <p class="role"><span class="fa fa-star checked"></span>             
-                                            <span class="fa fa-star checked"></span>
-                                            <span class="fa fa-star checked"></span>
-                                            <span class="fa fa-star checked"></span></p>     
-                                            </div>    
-                                      </div>
-                                    </div>
-
-                                    <div class="flip-card">
-                                            <div class="flip-card-inner">
-                                              <div class="flip-card-front">
-                                
-                                                    <img src="/images/img_avatar2.png" style="width:300px;height:100%">
-                                              </div>
-                                              <div class="flip-card-back">        
-                                                    <p class="role">SUPPORT</p>
-                                                    <br>
-                                                    <br>
-                                                    <img src="/images/img_avatar2.png" class="circular--square ">
-                                                    <br>
-                                                    <br>
-                                                    <br>
-                                                    <p class="role">Player1 - 1100LP</p>
-                                                    <p class="role"><span class="fa fa-star checked"></span>             
-                                                    <span class="fa fa-star checked"></span>
-                                                    <span class="fa fa-star checked"></span>
-                                                    <span class="fa fa-star checked"></span></p>     
-                                                    </div>    
-                                              </div>
-                                            </div>
-
-
-          </div> 
-        </div>
-    
+     
 
         
     <dic class = "footer">
       <p>Copyright 2019 Herie and Marcou</p>
     </div> </div>
-     
+    
+    <script src="scripts/slideshow.js"></script> <!-- Slideshow   -->
 </body>
 
 </html>
