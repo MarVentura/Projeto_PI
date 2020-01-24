@@ -53,8 +53,6 @@
   }
 }
 
-
-
 body {
   font-family:'Verdana';
   margin: 0; 
@@ -116,6 +114,13 @@ h3{
 /* Slideshow container */
 .slideshow-container {
   max-width: 500px;
+  position: relative;
+  margin: 0px auto;
+}
+
+/* Slideshow container 2 */
+.slideshow-container2 {
+  max-width: 1400px;
   position: relative;
   margin: 0px auto;
 }
@@ -358,6 +363,10 @@ h3{
   width: 70%;
 }
 
+.playerNickname{
+  color:white;
+}
+
 .playerProfile .playerContainer {
   box-shadow: 0 1px 1px 0 rgba(0,0,0,.5);
   background-color: #2d3844;
@@ -512,6 +521,10 @@ h3{
 
 .GameItemList {
   margin-top: 8px;
+}
+
+.listLeft{
+  color: white;
 }
 
 .GameItemList>.GameItemWrap {
