@@ -21,9 +21,35 @@
 
 }
 */
+
+@font-face {
+  font-family: FrizQuadradaBold;
+  src: url("C:\Projects\hw\Projeto_PI\www\Fonts\FrizQuadrata\FrizQuadrataBold.otf");
+}
+
+@font-face {
+  font-family: FrizQuadradaRegular;
+  src: url("./Fonts/FrizQuadrata/FrizQuadrataRegular.ttf");
+}
+
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+}
+
+.content {
+  position: fixed;
+  color: #f1f1f1;
+  width: 100%;
+}
+
 .topnav {
   overflow: hidden;
-  background-color: #F3A013;
+  /*background-color: #FCD745;*/
+  background-image: linear-gradient(#F3C513, #C09A05);
 }
 
 h1{
@@ -40,11 +66,14 @@ h1{
 .topnav a {
   float: left;
   display: flex;
-  color: #f2f2f2;
+  color: white;
   text-align: center;
-  padding: 24px 20px;
+  padding: 20px 20px;
+  padding-top: 26px;
+  text-transform: uppercase;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 26px;
+  font-weight: bold;
 }
 
 .topnav a:hover {
@@ -82,17 +111,13 @@ h1{
   }
 }
 
-body {
+body,html {
   font-family:'Verdana';
-  margin: 0; 
-  margin-bottom: 50px;
-  height: 100%; 
+  margin: 0;
+  height: 100%;
   overflow: auto;
-  background-color: #3621A8;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  /*background-image: linear-gradient(#3621A8, #1A50A0);
+  /*background-image: url("/images/animated-freljord.webm");*/
 }
 
 img {
@@ -255,7 +280,8 @@ h3{
 
 .outterDiv{
   /*background-image: url("/images/background.jpg");*/
-  background-color:#5A82BB;
+  
+  background-image: linear-gradient(#5A82BB, #1A50A0);
   /*background-size: 400px;*/
   padding-top: 35px;
   margin-left: 30px;
