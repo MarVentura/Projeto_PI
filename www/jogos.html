@@ -10,25 +10,43 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="scripts/navbar.js"> </script> <!-- Carregar a navbar  -->
-
+    <script src="./scripts/getRiot.js" type="text/javascript"></script>
     <title>Meta</title>
 </head>
 
-<body>
-
-    <div id="navbarLoad"></div>
-
-    <div class="spacing2">
-
-    </div>
 
 <body> 
     <video autoplay muted loop id="myVideo">
         <source src="/images/animated-freljord.webm" type="video/webm">
       </video>
+
 <div class="content">
 <div id="navbarLoad"></div>
 
+
+<br>
+<br>
+<br>
+
+<div class="divProcurarJogador">
+
+    <form action="javascript:getData()" method="post">
+        <fieldset class="fieldset">
+            <label for="nickname"> Nickname: </label>
+            <input id="nickname" type="text" name="nickname"/>
+            <br>
+            <br>
+            <input type="submit" value="Procurar">
+            <input type="reset" value="Limpar">
+        </fieldset>
+    </form>
+
+    <br>
+    <img src="" id="iconLOL"> <br>
+    Nome: <p id="nome"></p> <br>
+    Lvl: <p id="lvl"></p> <br>
+
+</div>
 
 </body>
 

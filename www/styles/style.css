@@ -47,11 +47,11 @@ h1{
   padding: 10px;  
   margin-bottom: 5px;
   margin-top: 5px;
-  margin-right: 25px;
+  margin-right: 0px;
   margin-left: 30px;
-  background-color: #251485;
+/*  background-color: #251485;
   border-radius: 5px;
-  box-shadow: 0px 0px 3px #1A0B69;
+  box-shadow: 0px 0px 3px #1A0B69;*/
 }
 
 .topnav a {
@@ -252,8 +252,8 @@ h3{
 }
 
 .role{
-  font-size: 24px;
-  height: 30px;
+  font-size: 12px;
+ 
   margin-block-start: 5px;
   margin-block-end: 5px;
   color: white;
@@ -272,8 +272,8 @@ h3{
  /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
  .flip-card {
   background-color: transparent;
-  width: 300px;
-  height: 350px;
+  width: 200px;
+  height: 250px;
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
 }
 
@@ -330,7 +330,7 @@ h3{
 }
 
 .divTitulo{
-  margin-top: 150px;
+  margin-top: 50px;
   margin-left: 800px;
   margin-right: 500px;
 }
@@ -732,4 +732,13 @@ h3{
 
 .GameItem>.GameDetail {
   background: #ededed;
+}
+
+
+/*Pagina pesquisar Info Jogador*/
+.divProcurarJogador {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
 }
