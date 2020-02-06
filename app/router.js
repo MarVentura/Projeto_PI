@@ -1,30 +1,15 @@
 // Dependências
-const Teams = require('./models/map');
+const Teams =  require('./models/map');
 const request = require('request');
-
 module.exports = function(app) {
 
     app.get('/equipas', function(req, res) {
-		console.log('entrou');
-		Teams.find({},(err, equipas) => {
+		Teams.find({},function(err, result){
 			if (err) {
-				res.status(500).send('ERRO');
+				res.status(500).send();
 			} else {
-				equipas.sort((a,b)=>{
-					return new Date(b.date) - new Date(a.date);
-				})
-				var array = [];
-				equipas.forEach((map)=>{
-					array.push({
-						id: map.id,
-						nome: map.nome,
-						Coach: map.Coach
-					})
-				})
-				console.log('bla');
-				console.log(equipas);
-				res.status(200).send(array);
-				console.log('entrou2');
+				console.log(result);
+				res.status(200).send(result);
 			}
 		});
 	});
@@ -36,12 +21,5 @@ module.exports = function(app) {
 					res.send(rres);   
 		})
 	});
-
-
-
-
-
-
-
 
 };

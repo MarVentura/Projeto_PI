@@ -1,9 +1,11 @@
 // Dependências
 var mongoose = require('mongoose');
 
-module.exports = mongoose.model('Equipas', {
+var equipaSchema = new mongoose.Schema({
 	id   : String,
 	nome : String,
 	jogadores: Array,
-	Coach: String,
+	Coach: String
 });
+
+module.exports = mongoose.model('equipa',equipaSchema,'Equipas');
