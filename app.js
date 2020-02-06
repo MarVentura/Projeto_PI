@@ -2,14 +2,12 @@
 const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
-const request = require('request');
 const MongoClient = require('mongodb').MongoClient;
 const mongoose = require('mongoose');
 //const requestHandlers = require("./request-handlers");
 
 // Ficheiros
 const router = require('./app/router');
-
 
 // Configurações do express
 app.set('view engine', 'ejs');
@@ -19,27 +17,37 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // Definição estátitica, fornece as páginas HTML tal como estão na pasta www
 app.use(express.static('www'));
 
-
 // Ligar à base de dados MongoDB
-const connectionString = `mongodb+srv://admin:<password>@cluster0-nbwfa.mongodb.net/test?retryWrites=true&w=majority`;
+const uri = "mongodb+srv://admin:admin@cluster0-nbwfa.mongodb.net/RiotDB?retryWrites=true&w=majority";
+const options = {useNewUrlParser: true,
+  useUnifiedTopology: true,
+  serverSelectionTimeoutMS: 5000,
+  }
+mongoose.connect(uri,options).then(() => {
+console.log("Conectado ao MongoDB");
+}).catch((err) => {
+    console.log("Não Conectado ao MongoDB", err);
+});
 
-mongoose.connect(connectionString, { useNewUrlParser: true, useUnifiedTopology: true }, (err) => {
-	if (err) {
-		console.log(err);
-	} else {
-		console.log('Conectado ao MongoDB');
-	}
+/*
+const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true});
+client.connect(function(err, db) {
+  console.log('Conectado ao MongoDB');  
+
 });
 
 
-
-app.post('/teste/:nome', function(req,res){
-    let teams = {url: 'https://euw1.api.riotgames.com/lol/summoner/v4/summoners/by-name/'+ req.params.nome +'?api_key=RGAPI-f48e3b63-6bbe-4060-b555-2080fcf761c4'}
-
-    request(teams,(err, rres, body) => {                      
-                res.send(rres);   
-    })
-});
+app.get('/getDados',(req,res) =>{
+  const db = client.db('RiotDB');
+  const collection = db.collection('Equipas');
+  collection.find().toArray(function(err, items) {
+    if (err) {
+      console.log(err);
+    } else {
+      console.log(items);
+    }          
+  });
+});*/
 
 // Roteamento
 require('./app/router')(app);
