@@ -8,12 +8,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="./scripts/equipas.js" type="text/javascript"></script>
     <script src="scripts/navbar.js"> </script>  <!-- Carregar a navbar  -->
     
     <title>Home Page</title>    
 </head>
 
-<body> 
+<body onload="getData()"> 
     <video autoplay muted loop id="myVideo">
         <source src="/images/animated-freljord.webm" type="video/webm">
       </video>
@@ -22,8 +23,6 @@
     <div class="divTitulo">
     <h1 class="h1Titulo"> Equipas</h1>
     <br>
-    <br>
-    <p> Para ver mais informações sobre as equipas passe o rato por cima da equipa.</p>
     </div>
     <div>
         <table class="tabelaEquipasEspaço">
@@ -32,17 +31,18 @@
                     <div class="flip-card">
                          <div class="flip-card-inner">
                          <div class="flip-card-front">    
-                        <img src="images/Equipas/LEC/600px-Excel.png" style="width:300px;height:100%;">
+                        <img id="imgEquipa0" src="" style="width:300px;height:100%;">
                     </div>
                             <div class="flip-card-back">        
-                                    <p class="role">Excel</p>
+                                    <p class="role" id='titulo0'>Bla</p>
                                     <br>                       
-                                    <p class="role">TOP: </p>
-                                    <p class="role">JUNGLE: </p>
-                                    <p class="role">MID: </p>
-                                    <p class="role">BOT: </p>
-                                    <p class="role">SUPPORT: </p>
+                                    <p class="role" id="top0">TOP: </p>
+                                    <p class="role" id="jungle0">JUNGLE: </p>
+                                    <p class="role" id="mid0">MID: </p>
+                                    <p class="role" id="adc0">ADC: </p>
+                                    <p class="role" id="support0">SUPPORT: </p>
                                     <br>
+                                    <p class="role" id="coach0">COACH: </p>
                                     <br>
                                     <p class="role"><span class="fa fa-star checked"></span>             
                                     <span class="fa fa-star checked"></span>
@@ -58,17 +58,18 @@
                         <div class="flip-card">
                              <div class="flip-card-inner">
                              <div class="flip-card-front">    
-                            <img src="images/Equipas/LEC/600px-Fnatic.png" style="width:300px;height:100%;">
+                            <img id="imgEquipa1" src="" style="width:300px;height:100%;">
                         </div>
                                 <div class="flip-card-back">        
-                                        <p class="role">Fnactic</p>
+                                        <p class="role" id='titulo1'>Fnactic</p>
                                         <br>                       
-                                        <p class="role">TOP: </p>
-                                        <p class="role">JUNGLE: </p>
-                                        <p class="role">MID: </p>
-                                        <p class="role">BOT: </p>
-                                        <p class="role">SUPPORT: </p>
+                                        <p class="role" id='top1'>TOP: </p>
+                                        <p class="role" id='jungle1'>JUNGLE: </p>
+                                        <p class="role" id='mid1'>MID: </p>
+                                        <p class="role" id='adc1'>ADC: </p>
+                                        <p class="role" id='support1'>SUPPORT: </p>
                                         <br>
+                                        <p class="role" id="coach1">COACH: </p>
                                         <br>
                                         <p class="role"><span class="fa fa-star checked"></span>             
                                         <span class="fa fa-star checked"></span>
@@ -84,17 +85,18 @@
                             <div class="flip-card">
                                  <div class="flip-card-inner">
                                  <div class="flip-card-front">    
-                                <img src="images/Equipas/LEC/600px-SK.png" style="width:300px;height:100%;">
+                                <img id="imgEquipa2" src="" style="width:300px;height:100%;">
                             </div>
                                     <div class="flip-card-back">        
-                                            <p class="role">SK GAMING</p>
+                                            <p class="role" id='titulo2'>SK GAMING</p>
                                             <br>                       
-                                            <p class="role">TOP: </p>
-                                            <p class="role">JUNGLE: </p>
-                                            <p class="role">MID: </p>
-                                            <p class="role">BOT: </p>
-                                            <p class="role">SUPPORT: </p>
+                                            <p class="role" id='top2'>TOP: </p>
+                                            <p class="role" id='jungle2'>JUNGLE: </p>
+                                            <p class="role" id='mid2'>MID: </p>
+                                            <p class="role" id='adc2'>ADC: </p>
+                                            <p class="role" id='support2'>SUPPORT: </p>
                                             <br>
+                                            <p class="role" id="coach2">COACH: </p>
                                             <br>
                                             <p class="role"><span class="fa fa-star checked"></span>             
                                             <span class="fa fa-star checked"></span>
@@ -109,17 +111,18 @@
                                 <div class="flip-card">
                                      <div class="flip-card-inner">
                                      <div class="flip-card-front">    
-                                    <img src="images/Equipas/LEC/600px-FC_Schalke_04.png" style="width:300px;height:100%;">
+                                    <img id="imgEquipa3" src="" style="width:300px;height:100%;">
                                 </div>
                                         <div class="flip-card-back">        
-                                                <p class="role">FC SHALKE 04</p>
+                                                <p class="role" id='titulo3'>FC SHALKE 04</p>
                                                 <br>                       
-                                                <p class="role">TOP: </p>
-                                                <p class="role">JUNGLE: </p>
-                                                <p class="role">MID: </p>
-                                                <p class="role">BOT: </p>
-                                                <p class="role">SUPPORT: </p>
+                                                <p class="role" id='top3'>TOP: </p>
+                                                <p class="role" id='jungle3'>JUNGLE: </p>
+                                                <p class="role" id='mid3'>MID: </p>
+                                                <p class="role" id='adc3'>ADC: </p>
+                                                <p class="role" id='support3'>SUPPORT: </p>
                                                 <br>
+                                                <p class="role" id="coach3">COACH: </p>
                                                 <br>
                                                 <p class="role"><span class="fa fa-star checked"></span>             
                                                 <span class="fa fa-star checked"></span>
@@ -133,17 +136,18 @@
                                     <div class="flip-card">
                                          <div class="flip-card-inner">
                                          <div class="flip-card-front">    
-                                        <img src="images/Equipas/LEC/600px-MadLions.png" style="width:300px;height:100%;">
+                                        <img id="imgEquipa4" src="" style="width:300px;height:100%;">
                                     </div>
                                             <div class="flip-card-back">        
-                                                    <p class="role">MAD LIONS</p>
+                                                    <p class="role" id='titulo4'>MAD LIONS</p>
                                                     <br>                       
-                                                    <p class="role">TOP: </p>
-                                                    <p class="role">JUNGLE: </p>
-                                                    <p class="role">MID: </p>
-                                                    <p class="role">BOT: </p>
-                                                    <p class="role">SUPPORT: </p>
+                                                    <p class="role" id='top4'>TOP: </p>
+                                                    <p class="role" id='jungle4'>JUNGLE: </p>
+                                                    <p class="role" id='mid4'>MID: </p>
+                                                    <p class="role" id='adc4'>ADC: </p>
+                                                    <p class="role" id='support4'>SUPPORT: </p>
                                                     <br>
+                                                    <p class="role" id="coach4">COACH: </p>
                                                     <br>
                                                     <p class="role"><span class="fa fa-star checked"></span>             
                                                     <span class="fa fa-star checked"></span>
@@ -163,17 +167,18 @@
                             <div class="flip-card">
                                  <div class="flip-card-inner">
                                  <div class="flip-card-front">    
-                                <img src="images/Equipas/LEC/600px-Excel.png" style="width:300px;height:100%;">
+                                <img id="imgEquipa5" src="" style="width:300px;height:100%;">
                             </div>
                                     <div class="flip-card-back">        
-                                            <p class="role">Excel</p>
+                                            <p class="role" id='titulo5'>Excel</p>
                                             <br>                       
-                                            <p class="role">TOP: </p>
-                                            <p class="role">JUNGLE: </p>
-                                            <p class="role">MID: </p>
-                                            <p class="role">BOT: </p>
-                                            <p class="role">SUPPORT: </p>
+                                            <p class="role" id='top5'>TOP: </p>
+                                            <p class="role" id='jungle5'>JUNGLE: </p>
+                                            <p class="role" id='mid5'>MID: </p>
+                                            <p class="role" id='adc5'>ADC: </p>
+                                            <p class="role" id='support5'>SUPPORT: </p>
                                             <br>
+                                            <p class="role" id="coach5">COACH: </p>
                                             <br>
                                             <p class="role"><span class="fa fa-star checked"></span>             
                                             <span class="fa fa-star checked"></span>
@@ -189,17 +194,18 @@
                                 <div class="flip-card">
                                      <div class="flip-card-inner">
                                      <div class="flip-card-front">    
-                                    <img src="images/Equipas/LEC/600px-Fnatic.png" style="width:300px;height:100%;">
+                                    <img id="imgEquipa6" src="" style="width:300px;height:100%;">
                                 </div>
                                         <div class="flip-card-back">        
-                                                <p class="role">Fnactic</p>
+                                                <p class="role" id='titulo6'>Fnactic</p>
                                                 <br>                       
-                                                <p class="role">TOP: </p>
-                                                <p class="role">JUNGLE: </p>
-                                                <p class="role">MID: </p>
-                                                <p class="role">BOT: </p>
-                                                <p class="role">SUPPORT: </p>
+                                                <p class="role" id='top6'>TOP: </p>
+                                                <p class="role" id='jungle6'>JUNGLE: </p>
+                                                <p class="role" id='mid6'>MID: </p>
+                                                <p class="role" id='adc6'>ADC: </p>
+                                                <p class="role" id='support6'>SUPPORT: </p>
                                                 <br>
+                                                <p class="role" id="coach6">COACH: </p>
                                                 <br>
                                                 <p class="role"><span class="fa fa-star checked"></span>             
                                                 <span class="fa fa-star checked"></span>
@@ -215,17 +221,18 @@
                                     <div class="flip-card">
                                          <div class="flip-card-inner">
                                          <div class="flip-card-front">    
-                                        <img src="images/Equipas/LEC/600px-SK.png" style="width:300px;height:100%;">
+                                        <img id="imgEquipa7" src="" style="width:300px;height:100%;">
                                     </div>
                                             <div class="flip-card-back">        
-                                                    <p class="role">SK GAMING</p>
+                                                    <p class="role" id='titulo7'>SK GAMING</p>
                                                     <br>                       
-                                                    <p class="role">TOP: </p>
-                                                    <p class="role">JUNGLE: </p>
-                                                    <p class="role">MID: </p>
-                                                    <p class="role">BOT: </p>
-                                                    <p class="role">SUPPORT: </p>
+                                                    <p class="role" id='top7'>TOP: </p>
+                                                    <p class="role" id='jungle7'>JUNGLE: </p>
+                                                    <p class="role" id='mid7'>MID: </p>
+                                                    <p class="role" id='adc7'>ADC: </p>
+                                                    <p class="role" id='support7'>SUPPORT: </p>
                                                     <br>
+                                                    <p class="role" id="coach7">COACH: </p>
                                                     <br>
                                                     <p class="role"><span class="fa fa-star checked"></span>             
                                                     <span class="fa fa-star checked"></span>
@@ -240,17 +247,18 @@
                                         <div class="flip-card">
                                              <div class="flip-card-inner">
                                              <div class="flip-card-front">    
-                                            <img src="images/Equipas/LEC/600px-FC_Schalke_04.png" style="width:300px;height:100%;">
+                                            <img id="imgEquipa8" src="" style="width:300px;height:100%;">
                                         </div>
                                                 <div class="flip-card-back">        
-                                                        <p class="role">FC SHALKE 04</p>
+                                                        <p class="role" id='titulo8'>FC SHALKE 04</p>
                                                         <br>                       
-                                                        <p class="role">TOP: </p>
-                                                        <p class="role">JUNGLE: </p>
-                                                        <p class="role">MID: </p>
-                                                        <p class="role">BOT: </p>
-                                                        <p class="role">SUPPORT: </p>
+                                                        <p class="role" id='top8'>TOP: </p>
+                                                        <p class="role" id='jungle8'>JUNGLE: </p>
+                                                        <p class="role" id='mid8'>MID: </p>
+                                                        <p class="role" id='adc8'>ADC: </p>
+                                                        <p class="role" id='support8'>SUPPORT: </p>
                                                         <br>
+                                                        <p class="role" id="coach8">COACH: </p>
                                                         <br>
                                                         <p class="role"><span class="fa fa-star checked"></span>             
                                                         <span class="fa fa-star checked"></span>
@@ -264,17 +272,18 @@
                                             <div class="flip-card">
                                                  <div class="flip-card-inner">
                                                  <div class="flip-card-front">    
-                                                <img src="images/Equipas/LEC/600px-MadLions.png" style="width:300px;height:100%;">
+                                                <img id="imgEquipa9" src="" style="width:300px;height:100%;">
                                             </div>
                                                     <div class="flip-card-back">        
-                                                            <p class="role">MAD LIONS</p>
+                                                            <p class="role" id='titulo9'>MAD LIONS</p>
                                                             <br>                       
-                                                            <p class="role">TOP: </p>
-                                                            <p class="role">JUNGLE: </p>
-                                                            <p class="role">MID: </p>
-                                                            <p class="role">BOT: </p>
-                                                            <p class="role">SUPPORT: </p>
+                                                            <p class="role" id='top9'>TOP: </p>
+                                                            <p class="role" id='jungle9'>JUNGLE: </p>
+                                                            <p class="role" id='mid9'>MID: </p>
+                                                            <p class="role" id='adc9'>ADC: </p>
+                                                            <p class="role" id='support9'>SUPPORT: </p>
                                                             <br>
+                                                            <p class="role" id="coach9">COACH: </p>                                            
                                                             <br>
                                                             <p class="role"><span class="fa fa-star checked"></span>             
                                                             <span class="fa fa-star checked"></span>
@@ -294,6 +303,7 @@
             </div> 
         </div>   
     </div>
+
     <script src="scripts/slideshow.js"></script> <!-- Slideshow   -->
 </body>
 
