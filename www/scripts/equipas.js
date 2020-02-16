@@ -45,6 +45,5 @@ function processarDados(resposta)
         document.getElementById(imgEquipa).setAttribute('src',parsed[i].img);
         console.log(i);
 
-
     }
 }

@@ -29,25 +29,6 @@ console.log("Conectado ao MongoDB");
     console.log("Não Conectado ao MongoDB", err);
 });
 
-/*
-const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true});
-client.connect(function(err, db) {
-  console.log('Conectado ao MongoDB');  
-
-});
-
-
-app.get('/getDados',(req,res) =>{
-  const db = client.db('RiotDB');
-  const collection = db.collection('Equipas');
-  collection.find().toArray(function(err, items) {
-    if (err) {
-      console.log(err);
-    } else {
-      console.log(items);
-    }          
-  });
-});*/
 
 // Roteamento
 require('./app/router')(app);
