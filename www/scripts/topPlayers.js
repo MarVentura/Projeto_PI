@@ -1,3 +1,4 @@
+// Receber info de todos os jogadores TOP ordenados pelo maior LP
 function getDataTop1() {
     var url = "/jogTOP1";
     var xhttp = new XMLHttpRequest();
@@ -10,6 +11,7 @@ function getDataTop1() {
     xhttp.send();
 }
 
+// Receber info de todos os jogadores JUNGLE ordenados pelo maior LP
 function getDataJGL1() {
     var url = "/jogJGL1";
     var xhttp = new XMLHttpRequest();
@@ -22,6 +24,7 @@ function getDataJGL1() {
     xhttp.send();
 }
 
+// Receber info de todos os jogadores MID ordenados pelo maior LP
 function getDataMID1() {
     var url = "/jogMID1";
     var xhttp = new XMLHttpRequest();
@@ -34,6 +37,7 @@ function getDataMID1() {
     xhttp.send();
 }
 
+// Receber info de todos os jogadores ADC ordenados pelo maior LP
 function getDataADC1() {
     var url = "/jogADC1";
     var xhttp = new XMLHttpRequest();
@@ -46,6 +50,7 @@ function getDataADC1() {
     xhttp.send();
 }
 
+// Receber info de todos os jogadores support ordenados pelo maior LP
 function getDataSUP1() {
     var url = "/jogSUP1";
     var xhttp = new XMLHttpRequest();
@@ -59,6 +64,21 @@ function getDataSUP1() {
     xhttp.send();
 }
 
+// Adicionar Champion a GOD tier
+function postChampion() {
+  var url = "/adicionarChampion" + '/' + document.getElementById("championName").value + '/' + document.getElementById("role").value;
+  var xhttp = new XMLHttpRequest();
+  xhttp.open("POST", url, true);
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      console.log(xhttp.responseText);
+    }
+  };    
+  xhttp.send();
+}
+
+
+// Processar informação para mostrar na pagina home o jogador com mais LP do TOP
 function processarTOP1(resposta)
 {
     var parsed = JSON.parse(resposta);
@@ -66,6 +86,7 @@ function processarTOP1(resposta)
     document.getElementById("imgTOP").setAttribute('src',parsed[0].img);
 }
 
+// Processar informação para mostrar na pagina home o jogador com mais LP da JUNGLE
 function processarJGL1(resposta)
 {
     var parsed = JSON.parse(resposta);
@@ -73,6 +94,7 @@ function processarJGL1(resposta)
     document.getElementById("imgJGL").setAttribute('src',parsed[0].img);
 }
 
+// Processar informação para mostrar na pagina home o jogador com mais LP do MID
 function processarMID1(resposta)
 {
     var parsed = JSON.parse(resposta);
@@ -80,6 +102,7 @@ function processarMID1(resposta)
     document.getElementById("imgMID").setAttribute('src',parsed[0].img);
 }
 
+// Processar informação para mostrar na pagina home o jogador com mais LP ADC
 function processarADC1(resposta)
 {
     var parsed = JSON.parse(resposta);
@@ -87,6 +110,7 @@ function processarADC1(resposta)
     document.getElementById("imgADC").setAttribute('src',parsed[0].img);
 }
 
+// Processar informação para mostrar na pagina home o jogador com mais LP SUPPORT
 function processarSUP1(resposta)
 {
     var parsed = JSON.parse(resposta);

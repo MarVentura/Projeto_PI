@@ -12,7 +12,11 @@ const router = require('./app/router');
 // Configurações do express
 app.set('view engine', 'ejs');
 app.set("views", "./views");
-app.use(bodyParser.urlencoded({ extended: false }));
+
+// Obter informação dos parâmetros do body dos pedidos
+app.use(bodyParser.json());
+app.use(bodyParser.json({ type: 'application/vnd.api+json' }));
+app.use(bodyParser.urlencoded({ extended: true}));
 
 // Definição estátitica, fornece as páginas HTML tal como estão na pasta www
 app.use(express.static('www'));

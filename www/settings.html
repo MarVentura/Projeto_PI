@@ -9,7 +9,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="scripts/navbar.js"> </script>  <!-- Carregar a navbar  -->
-    
+    <script src="./scripts/topPlayers.js" type="text/javascript"></script>
     <title>Noticias</title>    
 </head>
 <body> 
@@ -25,13 +25,23 @@
 <br>
 
 <div class="divProcurarJogador">
-<form action="javascript:getData()" method="POST"> 
+<form action="javascript:postChampion()" method="POST"> 
     <fieldset class="fieldset">
-        <label for="nickname"> Nickname: </label>
-        <input id="nickname" type="text" name="nickname"/>
+        <legend>Adicionar champion meta:</legend>
+        <label for="championName"> Champion name: </label>
+        <input id="championName" type="text" name="championName"/>
         <br>
-        <label for="nickname"> Nickname: </label>
-        <input id="nickname" type="text" name="nickname"/>
+
+        <label for="role">Selecione a lane:</label>
+
+        <select id="role">
+        <option value="TOP">TOP</option>
+        <option value="JGL">JUNGLE</option>
+        <option value="MID">MID</option>
+        <option value="ADC">ADC</option>
+        <option value="SUP">SUPPORT</option>
+        </select>
+
         <br>
         <br>
         <input type="submit" value="Adicionar">

@@ -4,6 +4,7 @@ const Players =  require('./models/jogadoresMap');
 const Games =  require('./models/jogosMap');
 const Meta = require('./models/metaMap');
 const request = require('request');
+var bodyParser = require('body-parser');
 module.exports = function(app) {
 
     app.get('/equipas', function(req, res) {
@@ -98,6 +99,26 @@ module.exports = function(app) {
 		}).sort({LP:-1});
 	});
 
+	app.post('/adicionarChampion/:championName/:role', function(req, res) {
+		let data = {
+			nome: req.params.championName,
+			tier: "GOD" , 
+			role: req.params.role
+		}
+		let newChampion = new Meta(data);
+		console.log(req.params);
+		if(data.nome == undefined || data.role == undefined)
+		{
+			console.log( data.nome + " " + data.role);
+		}
+		else{
+			newChampion.save(function (err, book) {
+			if (err) return console.error(err);
+			console.log(newChampion.nome + " saved to Champions Meta.");
+			});
+		}
+		
+	});
 
 
 	app.post('/teste/:nome', function(req,res){
