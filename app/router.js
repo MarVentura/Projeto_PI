@@ -99,6 +99,7 @@ module.exports = function(app) {
 	});
 
 
+
 	app.post('/teste/:nome', function(req,res){
 		let teams = {url: 'https://euw1.api.riotgames.com/lol/summoner/v4/summoners/by-name/'+ req.params.nome +'?api_key=RGAPI-01ea554c-01c1-44cf-8179-2f323bc39709'}
 	
